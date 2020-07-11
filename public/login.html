@@ -14,34 +14,52 @@
     <a class="navbar-brand" href="#">Path To The Iron Throne </a>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link" href="#">Home </a>
-        <a class="nav-item nav-link" href="#">Noble Houses</a>
-        <a class="nav-item nav-link" href="#">Characters</a>
-        <a class="nav-item nav-link active" href="#">Map <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="members.html">Home</a>
+        <a class="nav-item nav-link" href="house.html">Noble Houses</a>
+        <a class="nav-item nav-link" href="characters.html">Characters</a>
+        <a class="nav-item nav-link" href="map.html">Map</a>
       </div>
     </div>
   </nav>
   <hr>
-  <div class="container">
+  <div class="container py-5">
     <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Login Form</h2>
-        <form class="login">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="email-input" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="password-input" placeholder="Password">
-          </div>
-          <button type="submit" class="btn btn-default">Login</button>
-        </form>
-        <br />
-        <p>Or sign up <a href="/">here</a></p>
-      </div>
-    </div>
-  </div>
+        <div class="col-md-12">
+            <h2 class="text-center mb-4"></h2>
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <form class="form" role="form" autocomplete="off" id="formLogin" novalidate="" method="POST">
+                                <div class="form-group card-text">
+                                    <label for="uname1">Username</label>
+                                    <input type="text" class="form-control form-control-lg" name="uname1" id="uname1" required="">
+                                    <div class="invalid-feedback">Please enter a valid username</div>
+                                </div>
+                                <div class="form-group card-text">
+                                    <label>Password</label>
+                                    <input type="password" class="form-control form-control-lg" id="pwd1" required="" autocomplete="new-password">
+                                    <div class="invalid-feedback">Please enter a valid password</div>
+                                </div>
+                                <label class="forgot-password">Forgot Password?</label>
+                                <label class="sign-up"><a href="signup.html">Sign Up</a></label>
+                                <br>
+                                <br>
+                                <br>
+                                <div class="col text-center card-text">
+                                  <button type="submit" class="btn btn-lg roundbtn" id="btnLogin">Sign In</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/login.js"></script>
