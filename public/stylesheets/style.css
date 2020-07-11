@@ -14,5 +14,17 @@ hr{
 
 h2{
   color: #ffffff;
-
+  font-family: "Alegreya SC";
+}
+a{
+  font-family: "Alegreya SC";
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  color: white;
+  text-align: center;
 }
