@@ -1,3 +1,5 @@
+-- People
+
 INSERT INTO People (person, createdAt, updatedAt) VALUES ('Eddard "Ned" Stark', NOW(), NOW());
 INSERT INTO People (person, createdAt, updatedAt) VALUES ('Robert Baratheon', NOW(), NOW());
 INSERT INTO People (person, createdAt, updatedAt) VALUES ('Jaime Lannister', NOW(), NOW());
@@ -78,3 +80,14 @@ INSERT INTO People (person, createdAt, updatedAt) VALUES ('Euron Greyjoy', NOW()
 INSERT INTO People (person, createdAt, updatedAt) VALUES ('Beric Dondarrion', NOW(), NOW());
 INSERT INTO People (person, createdAt, updatedAt) VALUES ('Walder Frey', NOW(), NOW());
 INSERT INTO People (person, createdAt, updatedAt) VALUES ('The Night King', NOW(), NOW());
+
+-- House
+
+INSERT INTO Houses (House, createdAt, updatedAt) VALUES ('Stark', NOW(), NOW());
+INSERT INTO Houses (House, createdAt, updatedAt) VALUES ('Lannister', NOW(), NOW());
+INSERT INTO Houses (House, createdAt, updatedAt) VALUES ('Baratheon of Kings Landing', NOW(), NOW());
+INSERT INTO Houses (House, createdAt, updatedAt) VALUES ('Baratheon of Dragonstone', NOW(), NOW());
+INSERT INTO Houses (House, createdAt, updatedAt) VALUES ('Tyrell', NOW(), NOW());
+INSERT INTO Houses (House, createdAt, updatedAt) VALUES ('Targaryen', NOW(), NOW());
+INSERT INTO Houses (House, createdAt, updatedAt) VALUES ('Martell', NOW(), NOW());
+
