@@ -16,8 +16,21 @@ h2{
   color: #ffffff;
   font-family: "Alegreya SC";
 }
+.sign-up{
+  color: #ffffff;
+  font-family: "Alegreya SC";
+  font-size: 25px;
+  float: right;
+}
+.forgot-password{
+    color: #ffffff;
+    font-family: "Alegreya SC";
+    font-size: 25px;
+    float: left;
+  }
 a{
   font-family: "Alegreya SC";
+  color: white;
 }
 .footer {
   position: fixed;
@@ -26,5 +39,35 @@ a{
   width: 100%;
   background-color: white;
   color: white;
+  text-align: center;
+}
+.submit{
+  background-color: white;
+}
+.card{
+  border-color: #424242;
+  border-right: 0px;
+}
+.card-body{
+  background-color: #424242;
+  padding-top: 80px;
+  padding-right: 40px;
+  padding-left: 40px;
+  border: 0px;
+}
+.card-text{
+  color: #ffffff;
+  font-family: "Alegreya SC";
+  font-size: 25px;
+}
+.btn-lg{
+  background-color: white;
+  border-color: white;
+  color: black;
+}
+.roundbtn{
+  border-radius: 25px;
+}
+.member-name{
   text-align: center;
 }
