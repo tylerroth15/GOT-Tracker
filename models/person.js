@@ -13,7 +13,6 @@ module.exports = function(sequelize, DataTypes) {
     },
     livingDead: {
       type: DataTypes.BOOLEAN,
-      defaultValue: "true"
     }
   });
 
