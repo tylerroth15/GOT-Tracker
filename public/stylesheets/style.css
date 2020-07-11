@@ -46,9 +46,16 @@ a{
 }
 .card{
   border-color: #424242;
-  border-right: 0px;
+  border: 0px;
 }
-.card-body{
+.card-login{
+  background-color: #424242;
+  padding-top: 80px;
+  padding-right: 40px;
+  padding-left: 40px;
+  border: 0px;
+}
+.card-signup{
   background-color: #424242;
   padding-top: 80px;
   padding-right: 40px;
@@ -70,4 +77,22 @@ a{
 }
 .member-name{
   text-align: center;
+}
+p{
+  color: #ffffff;
+  font-family: "Alegreya SC";
+}
+.welcome-h2{
+  text-align: center;
+}
+.welcome-p{
+  text-align: center;
+}
+.welcome-card{
+  background-color: black;
+}
+.welcome-btn{
+  background-color: #424242;
+  border-color: #424242;
+  color: white;
 }
