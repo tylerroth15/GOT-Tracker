@@ -12,7 +12,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true
     },
     livingDead: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.BOOLEAN
     }
   });
 
