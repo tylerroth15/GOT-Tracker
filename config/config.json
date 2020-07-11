@@ -2,7 +2,7 @@
   "development": {
     "username": "q5lgf9izvr4luwpx",
     "password": "kp3va9omovwweeox",
-    "database": "passport_demo",
+    "database": "bynxaw5h6gdfzyno",
     "host": "otwsl2e23jrxcqvx.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
