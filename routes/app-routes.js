@@ -23,7 +23,7 @@ module.exports = function(app) {
     });
   
     // Add A New Character
-    app.post("/api/new", function(req, res) {
+    app.post("/api/person", function(req, res) {
         const person = req.body;
 
       // Then add the character to the database using sequelize
@@ -39,6 +39,18 @@ module.exports = function(app) {
     });
     
     //put
-    app.put()
-  };
+    app.put("/api/person", function(req, res) {
+        db.Person.update(
+          req.body.text,
+          {
+            where: {
+              id: req.body.id
+            }
+          }).then(function(dbPost) {
+          res.json(dbPost);
+        });
+      });
+    };
+    
+//   };
 
