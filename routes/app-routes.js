@@ -41,18 +41,20 @@ module.exports = function(app) {
   });
 
   //put
-  app.put("/api/update", (req, res)=>{
-    db.Person.update({
-      //update this code to work
+  app.put("/api/update", (req, res) => {
+    db.Person.update(
+      {
+        //update this code to work
         text: req.body.text,
         complete: req.body.complete
-      }, {
+      },
+      {
         where: {
           id: req.body.id
         }
-      })
-        .then(function(dbPerson) {
-          res.json(dbPerson);
-        });
+      }
+    ).then(dbPerson => {
+      res.json(dbPerson);
+    });
   });
 };
