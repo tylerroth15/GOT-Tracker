@@ -31,18 +31,18 @@ module.exports = function(app) {
     res.render("signup.handlebars");
   });
 
-  app.get("/map", (req, res)=>{
-    res.render("map.handlebars")
+  app.get("/map", (req, res) => {
+    res.render("map.handlebars");
   });
 
-  app.get("/house", (req, res)=>{
-    res.render("house.handlebars")
+  app.get("/house", (req, res) => {
+    res.render("house.handlebars");
   });
 
-  app.get("/characters", (req, res)=>{
-    res.render("characters.handlebars")
+  app.get("/characters", (req, res) => {
+    res.render("characters.handlebars");
   });
-  
+
   app.get("/newperson", (req, res) => {
     res.render("newperson.handlebars");
   });
