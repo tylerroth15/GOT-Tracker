@@ -13,7 +13,7 @@ module.exports = function(app) {
     //   res.redirect("/members");
     // }
     // res.sendFile(path.join(__dirname, "../public/signup.html"));
-    res.render("/members");
+    res.render("welcome.handlebars");
   });
 
   app.get("/login", (req, res) => {
@@ -24,15 +24,27 @@ module.exports = function(app) {
     //   res.redirect("/members");
     // }
     // res.sendFile(path.join(__dirname, "../public/login.html"));
-    res.render("/login");
+    res.render("login.handlebars");
   });
 
   app.get("/signup", (req, res) => {
-    res.render("/signup");
+    res.render("signup.handlebars");
   });
 
+  app.get("/map", (req, res)=>{
+    res.render("map.handlebars")
+  });
+
+  app.get("/house", (req, res)=>{
+    res.render("house.handlebars")
+  });
+
+  app.get("/characters", (req, res)=>{
+    res.render("characters.handlebars")
+  });
+  
   app.get("/newperson", (req, res) => {
-    res.render("/newperson");
+    res.render("newperson.handlebars");
   });
 
   // Here we've add our isAuthenticated middleware to this route.
