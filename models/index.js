@@ -1,6 +1,7 @@
 'use strict';
 
 var fs        = require('fs');
+const axios = require("axios");
 var path      = require('path');
 var Sequelize = require('sequelize');
 var basename  = path.basename(module.filename);
@@ -13,6 +14,13 @@ if (config.use_env_variable) {
 } else {
   var sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
+
+// const queryUrl = "";
+
+// axios.get(queryUrl).then(function(res)  {
+//   const 
+// })
+
 
 fs
   .readdirSync(__dirname)
