@@ -3,3 +3,10 @@ node_modules/
 .DS_Store
 package-lock.json
 desktop.ini
+/public/house.html
+/public/characters.html
+/public/login.html
+/public/map.html
+/public/members.html
+/public/signup.html
+/public/welcome.html

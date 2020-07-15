@@ -22,6 +22,10 @@ module.exports = function(app) {
     }
   });
 
+  //find all houses
+  // app.get("/api/house", (req,res)=>{
+  //   db.House.findAll({}).then(function(dbHouse))
+  // })
   // Add A New Character
   app.post("/api/people/new", (req, res) => {
     // const person = req.body;
@@ -30,7 +34,9 @@ module.exports = function(app) {
     db.Person.create({
       person: person.person,
       title: person.title,
-      livingDead: person.livingDead
+      livingDead: person.livingDead,
+      houseId: person.house,
+      loyalty: house.loyalty
     })
       .then(dbperson => {
         res.json(dbperson);
@@ -41,20 +47,27 @@ module.exports = function(app) {
   });
 
   //put
-  app.put("/api/update", (req, res) => {
+  app.put("/api/people/person", (req, res) => {
     db.Person.update(
       {
         //update this code to work
-        text: req.body.text,
-        complete: req.body.complete
+        person: req.body.person,
+        title: req.body.title,
+        livingDead: req.body.livingDead,
+        house: req.body.house,
+        loyalty: req.body.loyalty
       },
       {
         where: {
           id: req.body.id
         }
       }
-    ).then(dbPerson => {
-      res.json(dbPerson);
-    });
+    )
+      .then(dbPerson => {
+        res.json(dbPerson);
+      })
+      .catch(error => {
+        res.status(422).send(error);
+      });
   });
 };
