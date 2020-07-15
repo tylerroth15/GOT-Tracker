@@ -5,12 +5,12 @@ const db = require("../models");
 // =============================================================
 module.exports = function(app) {
   // Search for Specific Character (or all characters) then provides JSON
-  app.get("/api/:person?", (req, res) => {
+  app.get("/api/people/:person?", (req, res) => {
     if (req.params.person) {
       db.Person.findOne({
         where: {
           //seach function
-          routeName: req.params.person
+          person: req.params.person
         }
       }).then(result => {
         return res.json(result);
@@ -23,8 +23,8 @@ module.exports = function(app) {
   });
 
   // Add A New Character
-  app.post("/api/new", (req, res) => {
-    const person = req.body;
+  app.post("/api/people/new", (req, res) => {
+    // const person = req.body;
 
     // Then add the character to the database using sequelize
     db.Person.create({
