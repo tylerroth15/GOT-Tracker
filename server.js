@@ -3,6 +3,11 @@ const express = require("express");
 const session = require("express-session");
 // Requiring passport as we've configured it
 const passport = require("./config/passport");
+var exphbs = require("express-handlebars");
+var path = require("path")
+
+const Handlebars = require('handlebars');
+const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access');
 
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 8080;
@@ -13,6 +18,7 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
+
 // We need to use sessions to keep track of our user's login status
 app.use(
   session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
@@ -20,10 +26,18 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+//Static Directory
+app.use(express.static(path.join(__dirname,"public")));
+
+app.engine("handlebars", exphbs({ defaultLayout: "main", 
+	handlebars: allowInsecurePrototypeAccess(Handlebars)}));
+app.set("view engine", "handlebars");
+
+
 // Requiring our routes
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
-
+require("./routes/app-routes.js")(app);
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(() => {
   app.listen(PORT, () => {
@@ -34,3 +48,4 @@ db.sequelize.sync().then(() => {
     );
   });
 });
+

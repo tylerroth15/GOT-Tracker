@@ -7,18 +7,32 @@ const isAuthenticated = require("../config/middleware/isAuthenticated");
 module.exports = function(app) {
   app.get("/", (req, res) => {
     // If the user already has an account send them to the members page
-    if (req.user) {
-      res.redirect("/members");
-    }
-    res.sendFile(path.join(__dirname, "../public/signup.html"));
+
+    // commented out below code to test render functionality
+    // if (req.user) {
+    //   res.redirect("/members");
+    // }
+    // res.sendFile(path.join(__dirname, "../public/signup.html"));
+    res.render("/members")
   });
 
   app.get("/login", (req, res) => {
     // If the user already has an account send them to the members page
-    if (req.user) {
-      res.redirect("/members");
-    }
-    res.sendFile(path.join(__dirname, "../public/login.html"));
+
+    // commented out below code to test render functionality
+    // if (req.user) {
+    //   res.redirect("/members");
+    // }
+    // res.sendFile(path.join(__dirname, "../public/login.html"));
+    res.render("/login")
+  });
+
+  app.get("/signup", (req, res)=> {
+    res.render("/signup")
+  });
+
+  app.get("/newperson", (req, res)=>{
+    res.render("/newperson")
   });
 
   // Here we've add our isAuthenticated middleware to this route.
