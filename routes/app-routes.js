@@ -5,7 +5,7 @@ const db = require("../models");
 // =============================================================
 module.exports = function(app) {
   // Search for Specific Character (or all characters) then provides JSON
-  app.get("/api/people/:person?", (req, res) => {
+  app.get("/people/:person?", (req, res) => {
     if (req.params.person) {
       db.Person.findOne({
         where: {
@@ -17,7 +17,8 @@ module.exports = function(app) {
       });
     } else {
       db.Person.findAll().then(result => {
-        return res.json(result);
+        const characters = res.json(result);
+        res.render("characters", { layout: "main", characters });
       });
     }
   });
@@ -27,7 +28,7 @@ module.exports = function(app) {
   //   db.House.findAll({}).then(function(dbHouse))
   // })
   // Add A New Character
-  app.post("/api/people/new", (req, res) => {
+  app.post("/people/new", (req, res) => {
     // const person = req.body;
 
     // Then add the character to the database using sequelize
@@ -47,7 +48,7 @@ module.exports = function(app) {
   });
 
   //put
-  app.put("/api/people/person", (req, res) => {
+  app.put("/people/person", (req, res) => {
     db.Person.update(
       {
         //update this code to work
