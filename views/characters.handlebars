@@ -14,7 +14,12 @@
 <div class="container">
     <div class="row">
         <h2 class="member-name">Characters</h2>
-        <h2>{{ characters }}</h2>
+        <hr>
+        <div>
+        {{#each characters}}
+            <h4>{{ person }}: {{title}} </h4>
+        {{/each}}
+        </div>
     </div>
 </div>
 
