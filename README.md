@@ -39,6 +39,8 @@ tylerroth1535@gmail.com, hankshadow2000@yahoo.com, michael.spikes85@gmail.com
 
 ## Contributors
 
+Tyler Roth [https://github.com/tylerroth15] , Hank Miles href="https://github.com/hmiles3", Michael Spikes
+
 
 ## License
 <img src="https://img.shields.io/github/license/tylerroth15/GOT-Tracker">
