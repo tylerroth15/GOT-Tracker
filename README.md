@@ -2,6 +2,7 @@
 # GOT-Tracker
 #### Author: tylerroth15
 
+
 Our team was tasked with designing and building a full-stack web application. This application utilizes  the MVC paradigm as well as our own server-side API. The puropse of our application is to allow the user to track and update thier journey as they are watching the hit show, Game Of Thrones. This application will allow the user to create an account that will be be given an unique id within the database that will allow them to track each character's journey. This application will allow the user to update the House the character belongs to, if the character is alive or dead, that  character's title and finally the character's loyalty. 
 
 ### Open Issues <img src= "https://img.shields.io/github/issues/tylerroth15/GOT-Tracker">
@@ -39,7 +40,7 @@ tylerroth1535@gmail.com, hankshadow2000@yahoo.com, michael.spikes85@gmail.com
 
 ## Contributors
 
-Tyler Roth [https://github.com/tylerroth15] , Hank Miles href="https://github.com/hmiles3", Michael Spikes
+Tyler Roth [https://github.com/tylerroth15] , Hank Miles [https://github.com/hmiles3], Michael Spikes [https://github.com/michaelspikes85]
 
 
 ## License
