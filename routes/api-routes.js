@@ -51,3 +51,17 @@ module.exports = function(app) {
     }
   });
 };
+
+//update character
+// app.post("/api/new", function(req, res) {
+//   console.log("Character Data:");
+//   console.log(req.body);
+//   Character.update({
+//     alive: req.body.livingDead,
+//     house: req.body.house,
+//     title: req.body.title,
+//     loyalty: req.body.loyalty
+//   }).then(function(results) {
+//     res.json(results);
+//   });
+// });

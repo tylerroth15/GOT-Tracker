@@ -9,17 +9,17 @@ $("#update-btn").on("click", event => {
   // Update Character object
   const updateChar = {
     alive: $("#livingDead")
-      .val()
-      .trim(),
+      .val(),
+      // .trim(),
     house: $("#house")
-      .val()
-      .trim(),
+      .val(),
+      // .trim(),
     title: $("#title")
-      .val()
-      .trim(),
+      .val(),
+      // .trim(),
     loyalty: $("#loyalty")
       .val()
-      .trim()
+      // .trim()
   };
   // Send an AJAX POST-request with jQuery
   $.post("/api/new", updateChar)
