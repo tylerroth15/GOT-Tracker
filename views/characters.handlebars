@@ -16,12 +16,12 @@
         <h2 class="member-name">Characters</h2>    
     </div>
     <hr> 
-    <div class='col-md-6'>
+    <div class='col-md-12'>
         {{#each characters}}
                 <div class ='form-group row'>
                     <h4>{{ person }}:{{title}} </h4>
     </div>           
-    <div class='column col-md-6'>   
+    <div class='column col-md-3'>   
                     <div class='form-field form-group row col-xs-2'>
                         <label for='colorFilter ex1' class='dropdownLabel is_alive'>Alive or Dead</label>
                         <select id='colorFilter ex1' class='form-control'>
@@ -31,7 +31,7 @@
                         
                 </div>
     </div>
-    <div class='column col-md-6'>
+    <div class='column col-md-3'>
                 <div class='form-field form-group row col-xs-2 '>
                     <label for='colorFilter' class='dropdownLabel house'>House</label>
                     <select id='colorFilter' class='form-control'>
@@ -45,6 +45,18 @@
                         <option>Martell</option>
                     </select>
                 </div>  
+    </div>
+        <div class='column col-md-3'>   
+                    <div class='form-field form-group row col-xs-2'>
+                        <label for='colorFilter ex1' class='dropdownLabel is_alive'>Title</label>
+                        <input type="text" class="form-control form-control-lg" name="uname1" id="uname1"> 
+                </div>
+    </div>
+        <div class='column col-md-3'>   
+                <div class='form-field form-group row col-xs-2'>
+                        <label for='colorFilter ex1' class='dropdownLabel is_alive'>Loyalty</label>
+                        <input type="text" class="form-control form-control-lg" name="uname1" id="uname1"> 
+                </div>
     </div>
         {{/each}}
         </div>
