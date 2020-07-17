@@ -10,6 +10,7 @@ body{
 hr{
   height: 5px !important;
   border-top: 1px solid white !important;
+  width: 100% !important;
 }
 
 .title{
@@ -124,4 +125,8 @@ h4{
 .logout{
   font-size: 25px !important;
   padding: 8px !important;
+}
+
+.white-text{
+  color: #ffffff;
 }
