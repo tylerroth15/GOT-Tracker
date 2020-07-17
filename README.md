@@ -2,6 +2,7 @@
 # GOT-Tracker
 #### Author: tylerroth15
 
+<img src="https://path-to-the-iron-throne.herokuapp.com/">
 
 Our team was tasked with designing and building a full-stack web application. This application utilizes  the MVC paradigm as well as our own server-side API. The puropse of our application is to allow the user to track and update thier journey as they are watching the hit show, Game Of Thrones. This application will allow the user to create an account that will be be given an unique id within the database that will allow them to track each character's journey. This application will allow the user to update the House the character belongs to, if the character is alive or dead, that  character's title and finally the character's loyalty. 
 
