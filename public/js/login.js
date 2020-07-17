@@ -29,12 +29,13 @@ $(document).ready(() => {
       password: password
     })
       .then(res => {
-        window.location.replace("/characters");
+        res.redirect("/characters");
+        // If there's an error, log the error
       })
       .catch(handleLoginErr);
-    }
-        function handleLoginErr(err) {
-          $("#alert .msg").text(err.responseJSON);
-          $("#alert").fadeIn(500);
-        }
+  }
+  function handleLoginErr(err) {
+    $("#alert .msg").text(err.responseJSON);
+    $("#alert").fadeIn(500);
+  }
 });
