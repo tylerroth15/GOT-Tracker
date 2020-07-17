@@ -28,8 +28,8 @@ $(document).ready(() => {
       email: email,
       password: password
     })
-      .then(res => {
-        window.location.href = "/characters"
+      .then(() => {
+        window.location.href = "/characters";
         // If there's an error, log the error
       })
       .catch(handleLoginErr);
