@@ -8,13 +8,19 @@ body{
 }
 
 hr{
-  height: 15px;
-  border-top: 5px solid white;
+  height: 5px !important;
+  border-top: 1px solid white !important;
 }
 
+.title{
+  color: #ffffff;
+  font-family: "Alegreya SC";
+  font-size: 35px !important;
+}
 h2{
   color: #ffffff;
   font-family: "Alegreya SC";
+  font-size: 30px;
 }
 .sign-up{
   color: #ffffff;
@@ -95,4 +101,18 @@ p{
   background-color: #424242;
   border-color: #424242;
   color: white;
+}
+
+h4{
+  font-size: 20px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.is_alive, .house{
+  color: #d3d3d3 !important;
+}
+
+.column{
+  float: left;
 }

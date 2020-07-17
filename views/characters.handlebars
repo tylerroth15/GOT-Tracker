@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-    <a class="navbar-brand" href="#">Path To The Iron Throne </a>
+    <a class="navbar-brand title" href="#">Path To The Iron Throne </a>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <a class="nav-item nav-link" href="/members">Home</a>
@@ -13,14 +13,43 @@
 
 <div class="container">
     <div class="row">
-        <h2 class="member-name">Characters</h2>
-        <hr>
-        <div>
+        <h2 class="member-name">Characters</h2>    
+    </div>
+    <hr> 
+    <div class='col-md-6'>
         {{#each characters}}
-            <h4>{{ person }}: {{title}} </h4>
+                <div class ='form-group row'>
+                    <h4>{{ person }}:{{title}} </h4>
+    </div>           
+    <div class='column col-md-6'>   
+                    <div class='form-field form-group row col-xs-2'>
+                        <label for='colorFilter ex1' class='dropdownLabel is_alive'>Alive or Dead</label>
+                        <select id='colorFilter ex1' class='form-control'>
+                        <option>Alive</option>
+                        <option>Dead</option>
+                        </select>
+                        
+                </div>
+    </div>
+    <div class='column col-md-6'>
+                <div class='form-field form-group row col-xs-2 '>
+                    <label for='colorFilter' class='dropdownLabel house'>House</label>
+                    <select id='colorFilter' class='form-control'>
+                        <option>Select a House</option>
+                        <option>Stark</option>
+                        <option>Lannister</option>
+                        <option>Baratheon of Kings Landing</option>
+                        <option>Baratheon of Dragonstone</option>
+                        <option>Tyrell</option>
+                        <option>Targaryen</option>
+                        <option>Martell</option>
+                    </select>
+                </div>  
+    </div>
         {{/each}}
         </div>
-    </div>
+        
+        
 </div>
 
 <script type="text/javascript" src="js/characters.js"></script>
