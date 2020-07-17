@@ -116,3 +116,12 @@ h4{
 .column{
   float: left;
 }
+
+.nav-item{
+  font-size: 25px !important;
+}
+
+.logout{
+  font-size: 25px !important;
+  padding: 8px !important;
+}
