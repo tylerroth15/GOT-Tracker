@@ -29,7 +29,7 @@ $(document).ready(() => {
       password: password
     })
       .then(res => {
-        res.redirect("/members");
+        res.redirect("/characters");
       })
       .catch(handleLoginErr);
   }

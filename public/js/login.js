@@ -28,12 +28,13 @@ $(document).ready(() => {
       email: email,
       password: password
     })
-      .then(() => {
-        window.location.replace("/members");
-        // If there's an error, log the error
+      .then(res => {
+        window.location.replace("/characters");
       })
-      .catch(err => {
-        console.log(err);
-      });
-  }
+      .catch(handleLoginErr);
+    }
+        function handleLoginErr(err) {
+          $("#alert .msg").text(err.responseJSON);
+          $("#alert").fadeIn(500);
+        }
 });
