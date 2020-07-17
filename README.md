@@ -33,7 +33,7 @@ Using the email link below, please reach out with any questions.
 ### Picture
 <img src="https://avatars0.githubusercontent.com/u/59520608?v=4"> 
 <img src="https://avatars0.githubusercontent.com/u/60321908?s=400&u=e8a6c85dced7da79823dea5754460e7b8e4fcd85&v=4"> 
-<img src="https://avatars0.githubusercontent.com/u/60369601?s=400&u=880237e4bc8760b2c928cd8e3d686f2103af3b7c&v=4> 
+<img src="https://avatars1.githubusercontent.com/u/60369601?s=400&u=880237e4bc8760b2c928cd8e3d686f2103af3b7c&v=4"> 
 
 ### Email
 
