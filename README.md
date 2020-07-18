@@ -22,11 +22,27 @@ In order for this application to work, the user will need to run the following d
 
 ## Usage
 
-NA
+This application requires Heroku for deployment.
 
-## Tests
+## Tests 
 
-NA
+npm test
+
+## Technologies Used
+
+Bcpryptjs, Express-Handlebars, Express-Session, Mysql2, Passport, Passport-local, Sequelize, Lint, Travis, Javascript, CSS, Node.JS
+
+## Successes 
+
+Our primary sucess would be the database set up and the layout the overall application. 
+
+## Challenges Faced
+
+Throughout the duration of this project, our biggest challenge included setting up the Sign-UP and Sign-In Functionality and to correctly update the database dependent on each user. 
+
+## Future Development
+
+For future development we would like to include an interactive map for the user to track each character's journey through the show, an interactive House page that will include all the House Flags that upon selection will render the current members of this house and finally the ability to create a new character that is not already included within the application. 
 
 ## Questions
 
