@@ -15,58 +15,61 @@
 
 <div class="container">
     <div class="row">
-        <h2 class="member-name">Characters</h2>    
+        <h2 class="member-name">Characters</h2>
     </div>
-    <hr> 
-    <div class='col-md-12'>
-        {{#each characters}}
-                <div class ='form-group row'>
-                    <h4>{{ person }}:</h4>
-    </div>           
-    <div class='column col-md-3'>   
-                    <div class='form-field form-group row col-xs-2'>
-                        <label for='colorFilter ex1' class='dropdownLabel is_alive'>Alive or Dead</label>
-                        <select id='colorFilter ex1' class='form-control'>
-                        <option>Alive</option>
-                        <option>Dead</option>
-                        </select>
-                        
-                </div>
-    </div>
-    <div class='column col-md-3'>
-                <div class='form-field form-group row col-xs-2 '>
-                    <label for='colorFilter' class='dropdownLabel house'>House</label>
-                    <select id='colorFilter' class='form-control'>
-                        <option>Select a House</option>
-                        <option>Stark</option>
-                        <option>Lannister</option>
-                        <option>Baratheon of Kings Landing</option>
-                        <option>Baratheon of Dragonstone</option>
-                        <option>Tyrell</option>
-                        <option>Targaryen</option>
-                        <option>Martell</option>
-                    </select>
-                </div>  
-    </div>
-        <div class='column col-md-3'>   
-                    <div class='form-field form-group row col-xs-2'>
-                        <label for='colorFilter ex1' class='dropdownLabel is_alive'>Title</label>
-                        <input type="text" class="form-control form-control-md" name="uname1" id="uname1"> 
-                </div>
-    </div>
-        <div class='column col-md-3'>   
-                <div class='form-field form-group row col-xs-2'>
-                        <label for='colorFilter ex1' class='dropdownLabel is_alive'>Loyalty</label>
-                        <input type="text" class="form-control form-control-md" name="uname1" id="uname1"> 
-                </div>
-    </div>
-    <button type="button" class="btn btn-primary">Update Character</button>
-    <br>
-    <br>
-        {{/each}}
+    <hr>
+    <div class="col-md-12">
+        {{#each characters as |character|}}
+        <div class="form-group row">
+            <h4>{{ person }}:</h4>
         </div>
-        
-        
+        <div class="column col-md-3">
+            <div class="form-field form-group row col-xs-2">
+                <label for="colorFilter ex1" class="dropdownLabel is_alive">Alive or Dead</label>
+                <select id="livingDead-{{@index}}" class="form-control">
+                    <option value="Alive" {{selected 'Alive' character.livingDead}}>Alive</option>
+                    <option value="Dead" {{selected 'Dead' character.livingDead}}>Dead</option>
+                </select>
+
+            </div>
+        </div>
+        <div class="column col-md-3">
+            <div class="form-field form-group row col-xs-2 ">
+                <label for="colorFilter" class="dropdownLabel house">House</label>
+                <select id="house-{{@index}}" class="form-control">
+                    <option value="">Select a House</option>
+                    <option value="Stark" {{selected 'Stark' character.house}}>Stark</option>
+                    <option value="Lannister" {{selected 'Lannister' character.house}}>Lannister</option>
+                    <option value="Baratheon of Kings Landing" {{selected 'Baratheon of Kings Landing' character.house}}>Baratheon of Kings Landing</option>
+                    <option value="Baratheon of Dragonstone" {{selected 'Baratheon of Dragonstone' character.house}}>Baratheon of Dragonstone</option>
+                    <option value="Tyrell" {{selected 'Tyrell' character.house}}>Tyrell</option>
+                    <option value="Targaryen" {{selected 'Targaryen' character.house}}>Targaryen</option>
+                    <option value="Martell" {{selected 'Martell' character.house}}>Martell</option>
+                </select>
+            </div>
+        </div>
+        <div class="column col-md-3">
+            <div class="form-field form-group row col-xs-2">
+                <label for="colorFilter ex1" class="dropdownLabel is_alive">Title</label>
+                <input value="{{character.title}}" type="text" class="form-control form-control-md"
+                    id="title-{{@index}}">
+            </div>
+        </div>
+        <div class="column col-md-3">
+            <div class="form-field form-group row col-xs-2">
+                <label for="colorFilter ex1" class="dropdownLabel is_alive">Loyalty</label>
+                <input value="{{character.loyalty}}" type="text" class="form-control form-control-md"
+                    id="loyalty-{{@index}}">
+            </div>
+        </div>
+        <button name="{{@index}}" type="button" class="btn btn-primary" id="update-btn-{{@index}}">Update
+            Character</button>
+        <br>
+        <br>
+        {{/each}}
+    </div>
+
+
 </div>
 <hr>
 
