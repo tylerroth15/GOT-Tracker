@@ -31,11 +31,22 @@ app.use(passport.session());
 //Static Directory
 app.use(express.static(path.join(__dirname, "public")));
 
+const helpers = {
+  selected: function(option, value) {
+    if (option === value) {
+      return " selected";
+    }
+
+    return "";
+  }
+};
+
 app.engine(
   "handlebars",
   exphbs({
     defaultLayout: "main",
-    handlebars: allowInsecurePrototypeAccess(Handlebars)
+    handlebars: allowInsecurePrototypeAccess(Handlebars),
+    helpers
   })
 );
 app.set("view engine", "handlebars");

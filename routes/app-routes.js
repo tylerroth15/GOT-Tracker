@@ -48,7 +48,7 @@ module.exports = function(app) {
   });
 
   //put
-  app.put("/people/person", (req, res) => {
+  app.put("/people/:id", (req, res) => {
     db.Person.update(
       {
         //update this code to work

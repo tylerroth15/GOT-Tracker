@@ -12,17 +12,18 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true
     },
     livingDead: {
-      type: DataTypes.BOOLEAN
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    house: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    loyalty: {
+      type: DataTypes.STRING,
+      allowNull: true
     }
   });
-
-  Person.associate = function(models) {
-    Person.belongsTo(models.House, {
-      foreignKey: {
-        allowNull: true
-      }
-    });
-  };
 
   return Person;
 };
